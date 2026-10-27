@@ -2,7 +2,7 @@ databases:
   - name: zyvora-html-lab-db
     databaseName: zyvora_lab
     user: zyvora_lab_user
-    plan: basic-256mb
+    plan: basic_256mb
     region: singapore
 
 services:
