@@ -162,8 +162,8 @@ const progressSchema = z.object({
   unlockedLevel: z.number().int().min(1).max(10000),
   completedLevels: z.array(z.number().int().min(1).max(10000)).max(10000),
   quizPassedLevels: z.array(z.number().int().min(1).max(10000)).max(10000),
-}).refine((v) => v.unlockedLevel <= Math.max(1, ...v.completedLevels, 1) + 1, {
-  message: "Unlocked level must follow completed levels.",
+}).refine((v) => v.unlockedLevel <= Math.max(1, ...v.completedLevels, 1) + 1 && v.completedLevels.every((level) => v.quizPassedLevels.includes(level)), {
+  message: "A level must have both task and quiz completion before it is marked complete, and unlocked level must follow completed levels.",
 });
 app.get("/api/v1/me/progress", requireAuth, async (req, res, next) => {
   try {
