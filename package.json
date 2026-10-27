@@ -1,0 +1,13 @@
+{
+  "name": "zyvora-html-lab",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Root Render adapter for ZYVORA HTML LAB API",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm --prefix api install && npm --prefix api run build",
+    "start": "npm --prefix api start"
+  }
+}
