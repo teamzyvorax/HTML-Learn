@@ -1,29 +1,41 @@
-# ZYVORA HTML LAB
+# ZYVORA CODEVERSE
 
-A responsive, beginner-friendly coding playground for learning HTML, CSS, and JavaScript by typing code and seeing the result live.
+**Build. Break. Learn. Create.**
 
-## Features
-- Live code editor and sandboxed preview
-- Eight progressive learning levels
-- Level locking: the next lesson unlocks only after the current task passes
-- Quick quizzes and task hints
-- Short HTML history timeline
-- Responsive dark/neon ZYVORA design
-- No build tools, package install, or account required
+ZYVORA CODEVERSE is evolving from HTML LAB into a multilingual developer-learning universe: language tracks, progressive levels, an interactive browser IDE, challenge unlocking, local progression, and a production-ready backend architecture for cloud accounts and isolated compute.
 
-## Run it
-Open `index.html` in a modern browser. Type in the editor, use **Run code** to refresh the preview, and use **Check my task** to complete a lesson.
+## Current frontend build
+- 70+ language and framework tracks across Web, Backend, Systems, Data, DevOps, General and Web3
+- 10,000 progressive levels per track in the learning model
+- Search and category filtering
+- Interactive Codeverse IDE workspace
+- Real sandboxed browser execution for HTML, CSS and JavaScript
+- Challenge submission, hints, level unlocks and XP
+- Local progression across sessions
+- Developer progression dashboard
+- Responsive futuristic Zyvora interface
+- Runtime architecture prepared for isolated Python, Java, C++, Rust and other workers
 
-## Publish with GitHub Pages
-1. Open this repository's **Settings → Pages**.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select branch **main** and folder **/(root)**, then press **Save**.
-4. Wait for GitHub Pages to publish the site.
+## Important runtime boundary
+The frontend does **not** pretend to execute server languages. HTML/CSS/JavaScript run locally in a sandboxed iframe. Python, Java, C/C++, Rust and other arbitrary-code runtimes require an isolated backend worker/container before they can safely execute user code.
 
-Expected URL: https://teamzyvorax.github.io/HTML-Learn/
+## Backend
+The repository also contains a TypeScript/Express/PostgreSQL API under `api/` for authentication, progress and lesson attempts. Production cloud progress requires a configured `DATABASE_URL`; the static frontend remains usable without it.
 
-## Notes
-- This is a static site; no backend or database is required.
-- Progress currently lasts for the open page session and is not synced to an account.
-- The checker is a beginner exercise checker, not a full HTML validator.
-- The preview uses a sandboxed iframe. Only run code you understand.
+## GitHub Pages
+The static frontend is designed for GitHub Pages from the `main` branch root.
+
+Expected URL:
+`https://teamzyvorax.github.io/HTML-Learn/`
+
+## Roadmap
+1. Language-specific lesson/content packs
+2. Verified task + quiz progression on the server
+3. Isolated multi-language compute workers
+4. Project workspaces and multi-file repositories
+5. Cloud profiles, streaks, achievements and leaderboard
+6. Certificates with server verification
+7. AI tutor/debugger integration
+8. Admin/content-authoring system
+
+The roadmap is intentionally staged so the platform does not claim secure code execution before the required isolation layer exists.
